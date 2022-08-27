@@ -36,13 +36,13 @@ crseScCode = {
 }
 
 if data["시/도"] not in sido.keys():
-    print("'", data["시/도"], "'은(는) 잘못된 시/도명입니다.", sep="")
+    print("'", data["시/도"], "'은(는) 잘못된 시/도명입니다. 참고해주세요 : https://github.com/Sol-Studio/auto_jagajindan#%EC%8B%9C%EB%8F%84-%EB%A6%AC%EC%8A%A4%ED%8A%B8", sep="")
     exit()
 else:
     data["시/도"] = sido[data["시/도"]]
 
 if data["학교급"] not in crseScCode.keys():
-    print("'", data["학교급"], "'은(는) 잘못된 학교급입니다.", sep="")
+    print("'", data["학교급"], "'은(는) 잘못된 학교급입니다. 참고해주세요 : https://github.com/Sol-Studio/auto_jagajindan#%ED%95%99%EA%B5%90%EA%B8%89-%EB%A6%AC%EC%8A%A4%ED%8A%B8", sep="")
     exit()
 else:
     data["학교급"] = crseScCode[data["학교급"]]
@@ -67,9 +67,9 @@ try:
     driver.find_element_by_id("schul_name_input").click()
     driver.implicitly_wait(1000)
     select1 = Select(driver.find_element_by_id('sidolabel'))
-    select1.select_by_value('10')
+    select1.select_by_value(data["시/도"])
     select2 = Select(driver.find_element_by_id('crseScCode'))
-    select2.select_by_value('3')
+    select2.select_by_value(data["학교급"])
     driver.find_element_by_id("orgname").send_keys(data["학교"])
     clickByQuery('#softBoardListLayer > div.layerContentsWrap > div.layerSchoolSelectWrap > table > tbody > tr:nth-child(3) > td:nth-child(3) > button')
     clickByQuery("#softBoardListLayer > div.layerContentsWrap > div.layerSchoolSelectWrap > ul > li > a:nth-child(1)")
