@@ -8,6 +8,10 @@
 
 ## ✨빠른 시작
 파이썬 버전은 3.8 이상으로 설치해주세요!! 구버전에서는 작동하지 않습니다!<br>
+### 0. 코드 다운로드 받기
+https://github.com/Sol-Studio/auto_jagajindan/releases/tag/v1.0
+
+
 ### 1. pip로 필요 패키지 설치하기
 ```powershell
 $ pip install selenium==3.141.0
