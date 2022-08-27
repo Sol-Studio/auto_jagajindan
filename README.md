@@ -2,7 +2,6 @@
 <div align="center">
 
 <br>
-<a href="https://github.com/Sol-Studio/auto_jagajindan/releases"><img src="https://img.shields.io/github/downloads/Sol-Studio/auto_jagajindan/total" alt="다운로드 수"></a>
 <a href="https://discord.gg/auytc6qS83"><img src="https://img.shields.io/discord/851458756532895769?label=discord" alt="디스코드"></a>
 </div>
 
